@@ -2,12 +2,13 @@ var bugs = ["ants", "bees", "praying mantis", "dung beetle", "termites", "cicada
 
 function displayBugGifs() {
   var bug = $(this).attr("data-name");
-  var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + bug + "&api_key=MTEtzFSHPEm4xv77W0WXOVtqoErvppFq&limit=13&offset=0&rating=G&lang=en";
+  var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + bug + "&api_key=MTEtzFSHPEm4xv77W0WXOVtqoErvppFq&limit=13&offset=0&&lang=en";
 
   $.ajax({
     url: queryURL,
     method: 'GET'
   }).then(function(response) {
+    $(".gif-view").html("");
     var results = response.data;
     for (var i = 0; i < results.length; i++) {
 
@@ -56,7 +57,7 @@ $("#add-bug").on("click", function(event) {
 
   //adding bug from textbox to array
   bugs.push(bug);
-
+  $("#bug-input").val("");
   renderButtons();
 });
 
