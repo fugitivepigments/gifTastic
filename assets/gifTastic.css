@@ -3,7 +3,7 @@ body {
     font-size: 18px;
     line-height: 34px;
     color: black;
-    background: url("../images/Blog_90s-web-trends_072215_feature-011.png");
+    background: url("Images/spiration dark.png");
 }
 
 h1 {
@@ -25,23 +25,27 @@ h2 {
     text-align: center;
 }
 
-.answers {
-  perspective: 1000px;
-  padding: 0;
-  list-style: none;
-}
-
-.ans {
+#add-bug {
   background-color: white;
   transition: all .3s ease;
   cursor: pointer;
-  margin: 8px 0;
+  margin: 8px 0px;
 }
 
-.ans:hover {
-  transform: translate3d(0,0,60px);
+#add-bug:hover {
   background: #EFEFEF;
 
+}
+
+.bug-btn {
+  background-color: white;
+  transition: all .3s ease;
+  cursor: pointer;
+  margin: 8px 3px;
+}
+
+.bug-btn:hover {
+  background: #EFEFEF;
 }
 
 // Extra small devices (portrait phones, less than 576px)
